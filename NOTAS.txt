@@ -55,7 +55,7 @@ CAMBIAMOS EN config/app.php
     */
     
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::: CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4 ::::
+:::: CLASE 5  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4 ::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
  .env => en la raiz sirve para cambiar la conexion a su base de datos
@@ -75,5 +75,23 @@ configuracion de rutas
 
     app/routes/web.php
 
-    
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::: CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5  CLASE 5 ::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Crear Controllers con el comando
+
+    php artisan make:controller nombreControlador
+
+    y se crea en la ruta app/Http/Controllers/nombreControlador.php
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Crear requests con el comando
+
+    php artisan make:request nombreRequest
+
+    y se crea en la ruta app/Http/Requests/nombreRequest.php
+
+
     
