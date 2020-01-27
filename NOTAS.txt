@@ -1,0 +1,61 @@
+cmd linea de comandos para empezar a crear una app
+
+para crear el proyecto :
+
+1: CREAMOS UNA CARPETA EN C:/ y con el cmd nos ubicamos ahi y escribimos
+
+composer create--project  --prefer-dist laravel/laravel NOMBRE_PROYECTO
+
+2: para cambiar el nombre a la app:
+
+en el proyecto donde podemos ver como se llama ruta es:
+
+CARPETA_DE_PROYECTO/app/Http/Controller.php(si no has cambiado saldra app/Http/Controller)
+
+linea de comando 
+
+php artisan app:name NOMBRE_PROYECTO (de preferencia que sea igual al de la carpeta)
+(NOTA: la v 6.+ laravel quito el app:name asi que corremos el en terminal de vs el comando
+composer require andrey--helldar/laravel-app --dev    eso es para bajar el app:name)
+
+php artisan app:name NOMBRE_PROYECTO
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CAMBIAMOS EN config/app.php 
+
+
+    'debug' => env('APP_DEBUG', true),
+    /*
+     para que nos muestre errores ya que estamos en etapa de desarrollo, por defecto eso estara en modo false,
+     una ves que publiquemos nuestra app lo cambiamos a false 
+    */
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    
+    'timezone' => 'UTC',
+    
+    'timezone' => 'America/Lima',// PERU lima
+    /*
+    Cambiamos la zona horarios dependiendo en que lugar estes, googleamos nomas el timezone
+    https://www.php.net/manual/es/timezones.america.php
+    */
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    
+    'locale' => 'es',
+    /*
+    Por defecto estara en modo en => ingles pero lo cambiamos al que nos acomodes
+    https://github.com/Laraveles/spanish
+    por cada idioma debemos crearle su carpeta en la ruta resources/lang/AQUI_CARPETA_DE_IDIOMA
+
+    */
+    
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
