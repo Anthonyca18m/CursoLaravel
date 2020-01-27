@@ -23,7 +23,6 @@ php artisan app:name NOMBRE_PROYECTO
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 CAMBIAMOS EN config/app.php 
 
 
@@ -33,7 +32,6 @@ CAMBIAMOS EN config/app.php
      una ves que publiquemos nuestra app lo cambiamos a false 
     */
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     
@@ -46,7 +44,6 @@ CAMBIAMOS EN config/app.php
     */
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     
     'locale' => 'es',
@@ -58,5 +55,25 @@ CAMBIAMOS EN config/app.php
     */
     
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::: CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4  CLASE 4 ::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+ .env => en la raiz sirve para cambiar la conexion a su base de datos
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+para crear los modelos, ya que laravel trabaja a base MVC , creamos con el comando:
+
+    php artisan make:model Nombre_Modelo (recuerda que siempre debe ir 1era letra con mayuscula)
+
+ y lo podemos ver en la ruta app/Nombre_modelo.php , viene uno por defecto que es user para crear usuarios....
+ y de ahi pasamos a configurarlos
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+configuracion de rutas
+
+    app/routes/web.php
+
+    
+    
