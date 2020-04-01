@@ -19,15 +19,42 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Auth::routes();
+Route::get('/hola', 'holaController')->name('hola');
 
-// Route::get('/usuario3/{nombre?}', function($nombre){
-//     return "Usuario: ".$nombre;
-// })->name('usuarionametest');
+Route::get('/usuario/{nombre?}', 'UsuarioController@usuarioUnParametro')->name('usuarionombre');
 
-// Route::get('/usuario/{nombre}/comentario/{comentarioId}', function($nombre, $comentario){
-//     return "Usuario: ".$nombre . "<br> Comentario: " . $comentario;
-// });
+Route::get('/user/{nombre}', 'Usuario\UserController@user');
+
+Route::get('/user1/{id}', 'Usuario\UserController@user1')->where('id', '[0-9]+');
+
+Route::get('/user2/{id}/comentario/{comentario}', 'Usuario\UserController@user2')->where(
+    [
+        'id' => '[0-9]+',
+        'comentario' => '[A-Za-z]+'
+    ]
+);
+Route::get('/usuario/{nombre}/comentario/{comentarioId}', 'UsuarioController@usuarioDosParametros');
+
+
+Route::resource('varios', 'variosMetodosRecursos');
+
+//llamando a metodos en especifico
+Route::resource('varios', 'variosMetodosRecursos')->only([
+    'index', 'show'
+]);
+
+//restringiendo a metodos en especifico
+Route::resource('varios2', 'variosMetodosRecursos')->except([
+    'create', 'store', 'update', 'destroy'
+]);
+
+
+//modificando nombres de las rutas
+Route::resource('varios3', 'variosMetodosRecursos')->only([
+    'index', 'show'
+])->names([
+    'index' => 'varios.inicio'
+]);
 
 //ruta con parametro solo de tipo alfanumerica
 // Route::get('/usuario/{nombre}', function($nombre){
