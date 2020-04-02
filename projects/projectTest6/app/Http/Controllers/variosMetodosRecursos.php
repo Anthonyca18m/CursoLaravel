@@ -18,7 +18,8 @@ class variosMetodosRecursos extends Controller
         //return redirect()->action('UsuarioController@usuarioUnParametro', ['nombre'=> 'Anthony Cachi']);
         //return redirect('hola');
         $info = info::all();
-        dd($info);
+        // dd($info);
+        return view('varios')->with('info', $info);
 
     }
 
