@@ -19,7 +19,7 @@ class variosMetodosRecursos extends Controller
         //return redirect('hola');
         $info = info::all();
         // dd($info);
-        return view('varios')->with('info', $info);
+        return view('varios.index')->with('info', $info);
 
     }
 
@@ -35,11 +35,11 @@ class variosMetodosRecursos extends Controller
         // $info->descripcion = 'Curso Laravel';
         // $info->save();
 
-        $info::create([
-            'nombre' => 'tom',
-            'descripcion' => 'midescription'
-        ]);
-        return 'datos guardados correctamente';
+        // $info::create([
+        //     'nombre' => 'tom',
+        //     'descripcion' => 'midescription'
+        // ]);
+        return view('varios.create')->with('info', $info);
     }
 
     /**
@@ -62,6 +62,7 @@ class variosMetodosRecursos extends Controller
     public function show($id)
     {
         //
+        return view('varios.show', compact('id'));
     }
 
     /**
@@ -79,10 +80,10 @@ class variosMetodosRecursos extends Controller
         // return 'here´s';
         // dd($info);
 
-        $info = info::find($id);
-        $info->nombre= 'modificado';
-        $info->save();
-        return "datos actualizados";
+        // $info = info::find($id);
+        // $info->nombre= 'modificado';
+        // $info->save();
+        return view('varios.edit', ['id', $id]);
     }
 
     /**

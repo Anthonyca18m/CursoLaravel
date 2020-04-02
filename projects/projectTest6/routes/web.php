@@ -40,7 +40,7 @@ Route::resource('varios', 'variosMetodosRecursos');
 
 //llamando a metodos en especifico
 Route::resource('varios', 'variosMetodosRecursos')->only([
-    'index', 'show'
+    'index', 'show', 'edit'
 ]);
 
 //restringiendo a metodos en especifico
@@ -51,7 +51,7 @@ Route::resource('varios2', 'variosMetodosRecursos')->except([
 
 //modificando nombres de las rutas
 Route::resource('varios3', 'variosMetodosRecursos')->only([
-    'index', 'show'
+    'index', 'show', 'edit'
 ])->names([
     'index' => 'varios.inicio'
 ]);
