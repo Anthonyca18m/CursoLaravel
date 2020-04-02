@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\info;
 
 class variosMetodosRecursos extends Controller
 {
@@ -15,7 +16,10 @@ class variosMetodosRecursos extends Controller
     {
         //return redirect()->action('holaController');
         //return redirect()->action('UsuarioController@usuarioUnParametro', ['nombre'=> 'Anthony Cachi']);
-        return redirect('hola');
+        //return redirect('hola');
+        $info = info::all();
+        dd($info);
+
     }
 
     /**
@@ -25,7 +29,16 @@ class variosMetodosRecursos extends Controller
      */
     public function create()
     {
-        //
+        $info = new info;
+        // $info->nombre = 'Anthony';
+        // $info->descripcion = 'Curso Laravel';
+        // $info->save();
+
+        $info::create([
+            'nombre' => 'tom',
+            'descripcion' => 'midescription'
+        ]);
+        return 'datos guardados correctamente';
     }
 
     /**
@@ -58,7 +71,17 @@ class variosMetodosRecursos extends Controller
      */
     public function edit($id)
     {
-        //
+
+        // $info = info::findOrFail($id);
+        // $info = info::where('id','=', $id)->firstOrFail();
+        // dd($info);
+        // return 'here´s';
+        // dd($info);
+
+        $info = info::find($id);
+        $info->nombre= 'modificado';
+        $info->save();
+        return "datos actualizados";
     }
 
     /**
