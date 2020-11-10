@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Group;
+use App\Models\Location;
 use App\Models\Profile;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -37,5 +38,11 @@ class User extends Authenticatable
     public function groups()
     {
         return $this->belongsToMany(Group::class)->withTimestamps();
+    }
+
+    // a través de perfil tiene una localización
+    public function location()
+    {
+        return $this->hasOneThrough(Location::class, Profile::class);
     }
 }
